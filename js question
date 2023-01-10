@@ -1,1 +1,558 @@
 #JS-QUESTION
+
+
+/// js interview question 
+
+//1 
+// let a=[];
+// let b=[];
+// console.log(a==b)
+// console.log(a===b)
+
+//2
+// let a=[];
+// let b=a;
+// console.log(a==b)
+// console.log(a===b)
+
+//3
+// let a = [20];
+// let b = [20];
+// console.log(a[0] == b[0]);
+// console.log(a[0] === b[0]);
+
+// 4
+// let z = [1,2,3,4]
+// let a = {name: "ritu"};
+// console.log(...z);
+
+// 5
+// console.log(typeof NaN);
+
+//6
+// let data = 10 - - 10;
+// console.log(data)
+
+//7
+// const set = new Set([1,1,2,3,4]);
+// console.log(set)
+
+//8
+// let data = {name: "ritu" };
+// console.log(delete data.name);
+
+//9
+// const data = {name : "ritu"};
+// console.log(delete data)
+
+//10
+// const data = ["ritu","riya","priya"];
+// const[y] = data;
+// console.log(y);
+
+//11
+// const data = {name: "ritu", age:20, skill:"React"};
+// how to get name property without . operator
+
+//12
+// let data = {name : "ritu", age:20 , skill:"js" };
+// let info = {city :"nagpur" , mail:"@123"};
+// data = {...data,...info}
+// console.log(data)
+
+//13
+// let data = {name : "ritu", age:20 , skill:"js" };
+// let info = {city :"nagpur"};
+// data = {data,...info}
+// console.log(data)
+
+//14
+// let data = {name : "ritu", age:20 , skill:"js" };
+// let info = {city :"nagpur" ,skill:"React"};
+// data = {...data,...info}
+// console.log(data)
+
+//15
+// const name = "ritu";
+// console.log(name());
+
+//16
+// const result = false || {} || null;
+// console.log(result);
+
+//17
+// const result = null || false || '';
+// console.log(result);
+
+//18
+// const result = [] || 0 || true;
+// console.log(result);
+
+//19
+// console.log(Promise.resolve(5));
+
+//20
+// console.log('😇'==='😇')
+
+//21
+// JSON.parse();
+// what is method will do?
+// A: parse json to javaSript value 
+// B: parse a javascript object to json
+// C: parses any javascript value to json
+// D: parses json to a javascript object only
+
+//22
+// let name = "ritu";
+
+// function getName() {
+//   console.log(name);
+//   let name = "riya";
+// }
+// getName();
+
+//23
+// let name = "ritu";
+// function getName() {
+//   console.log(name);
+// } 
+// getName()
+
+//24
+// console.log(`${(x => x)('I love')} to program`);
+
+//25
+// output should be 6
+// function sumValues(x,y,z){
+//   return x + y + z;
+// }
+// console.log(sumValues(...[1,2,3]));
+// console.log([...1,2,3])
+// console.log([...[1,2,3]])
+// console.log([1,2,3])
+
+//26
+// const name = 'i am ritu learning react'
+// console.log(!typeof name === 'object');
+// console.log(!typeof name === 'String');
+
+//27
+// const name = "ritu";
+// const age = 20;
+
+// console.log(isNaN(name));
+// console.log(isNaN(age));
+
+//28
+// let person = { name: 'ritu'};
+// //how can we modife person object
+// Object.seal(person);
+// console.log(person);
+
+//29
+// let data = [2,4,6,0];
+// //remove first element
+// console.log(data);
+
+//30
+// let data = [2,4,6,0];
+// //remove last element
+// console.log(data);
+
+//31 
+//check any value is odd or even
+
+//32 
+// let data = "true";
+//convert data to boolean false value
+// console.log(!data)
+
+//33
+// let data = "true";
+// //convert data to boolean false value
+// console.log(!!data)
+
+//34
+// difference between map and forEach functon 
+
+//35
+// let data = ["ritu","riya","priya"];
+// delete data[1];
+// console.log(data)
+
+//36
+// let data = ["ritu","riya","priya"];
+// delete data[1];
+// console.log(data.length);
+
+//37
+//how to merge two Array
+// let a = [1,4,2,2];
+// let b= [3,4,2];
+// let c = [...a,...b];
+// console.log(c);
+
+//38 
+// let c = 3 ** 3;
+// console.log(c)
+
+//39
+// let a=2;
+// setTimeout(() => {
+//   console.log(a)
+// },0);
+// a=100;
+
+//40
+// let a= 2;
+// let A= 4;
+// console.log(A);
+
+//41
+// let A10 = "i like xyz";
+// // let 10A = "i like abc";
+// console.log(A10);
+
+//42
+// let a = "like";
+// let b= `like`;
+// console.log(a===b);
+
+//43
+// let a = 1;
+// let b = 2;
+// console.log(--b === a);
+
+//44
+// let a = 1;
+// let b = 1;
+// let c= 2;
+// console.log(a===b === --c);
+
+//45
+// console.log(3 *3);
+// console.log(3 ** 3);
+// console.log(3 *** 3);  
+
+//46
+// console.log(a);
+// var a;
+
+//47
+// console.log(b)
+
+//48
+// console.log([[[[]]]])
+
+//49
+// let for = 100;
+
+//50
+// function fruit() {
+//   console.log(name);
+//   console.log(price);
+    
+//   var name = "apple";
+//   let price = 100;
+// }
+// fruit();
+
+//51
+// for(var i =0;i<3;i++){
+//   setTimeout(() => {
+//     console.log(i)
+//   },1);
+// }
+
+//52 
+// console.log(+true);
+// console.log(typeof +true);
+
+//53
+// console.log(!"ritu");
+// console.log(typeof("ritu"))
+
+//54 
+// let data = "size";
+// const bird = {
+//   size : "small",
+// };
+// console.log(bird[data]);
+// console.log(bird["size"])
+// console.log(bird.size);
+// console.log(bird.data);
+
+//55
+// let c= {name:"champa"};
+// let d;
+// d=c;
+// c.name = "rose";
+// console.log(d.name);
+
+//56
+// var x;
+// var x=100;
+// console.log(x);
+
+//57
+// var x;
+// let x= 10;
+// console.log(x)
+
+//58
+// let a =6;
+// let b= new Number(6);
+// console.log(a == b);
+// console.log(a === b)
+
+//59
+// let name;
+// nmae = {}; //typo error 
+// console.log(name)
+// console.log(nmae)
+
+//60
+// function fruit() {
+//   console.log("mango");
+// }
+// fruit.name = "apple";
+// fruit();
+
+//61 
+// function sum(a,b){
+//   return a + b;
+// }
+// console.log(sum(1,"2"));
+
+//62
+// let number =0;
+// console.log(number++);
+// console.log(++number);
+// console.log(number);
+
+//63
+// function getAge(...args) {
+//   console.log(typeof args);
+// }
+// getAge(20);
+
+//64
+// function getAge() {
+//   'use strict';
+//   age = 20;
+//   console.log(age);
+// }
+// getAge();
+
+//65
+// const sum = eval('10*10+5');
+// console.log(sum)
+
+//66
+// const obj = {1:"a",2:"b",3:"c"};
+// console.log(obj.hasOwnProperty("1"));
+// console.log(obj.hasOwnProperty(1));
+
+//67
+// const obj = {a:"one",b:"two",a:"repeat"};
+// console.log(obj);
+
+//68
+// for (let i=1;i<5;i++){
+//   if(i===3) continue;
+//   console.log(i);
+// }
+
+//69
+// const foo = () => console.log('FIrst');
+// const bar = () => setTimeout(() => console.log("second"));
+// const baz = () => console.log('third');
+
+// baz();
+// foo();
+// bar();
+
+//70  ----doubtt
+// <div onClick="console.log("first div")>
+//   <div onClick="console.log("second div")>
+//       <button ovClick="console.log("button")>
+//           Click!
+//       </button>
+//   </div>
+// </div>
+// </div>
+
+// //71 
+// const person = {name: "ritu"};
+
+// function sayHi(age) {
+//   return `${this.name} is ${age}`;
+// }
+// console.log(sayHi.call(person, 20));
+// console.log(sayHi.bind(person, 20));
+
+//72 
+// function sayHi() {
+//   return (() => 0)();
+// }
+// console.log(typeof sayHi());
+
+//73
+// function sayHi() {
+//   return () => 0;
+// }
+// console.log(typeof sayHi());
+
+//74
+// console.log(typeof typeof 1);
+
+//75
+// const numbers = [1,2,3];
+// numbers[6]=11;
+// console.log(numbers);
+
+//76 
+// const numbers = [1,2,3];
+// numbers[9] = numbers;
+// console.log(numbers)
+
+//77
+// everything in js is either a....
+// A: primitive or object;
+// B: function or object;
+// C: trick question! only objects
+// D: number or object
+
+//78 
+// console.log(!!null);
+// console.log(!!"");
+// console.log(!!1);
+
+//79
+// console.log(setInterval(() => console.log("hi 1"),1000));
+// console.log(setInterval(() => console.log("hi 2"),1000));
+// console.log(setInterval(() => console.log("hi 3"),1000));
+
+//80 
+// console.log([..."ritu"]);
+
+//81
+// const firstPromise = new Promise((res, rej) => {
+//     setTimeout(res,500,'one');
+// });
+
+// const secondPromise = new Promise((res, rej) => {
+//   setTimeout(res,100,'two');
+// });
+// Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+
+//82  ----doubtt
+// let person = {name: 'ritu'};
+// const members = [person];
+// person = null;
+// console.log(members);
+
+//83
+// const person = {
+//   name: "batman",
+//   age:32
+// };
+ 
+// for (const item in person) {
+//   console.log(item);
+// } 
+
+//84
+// let data = 3 + 4 +'5';
+// console.log(typeof data)
+
+//85 
+// console.log(typeof 3 + 4 + '5')
+
+//86
+// console.log(typeof  (3 + 4 + '5'));
+
+//87
+// console.log([] ==[]);
+
+//88
+// let data = [1,2,3].map(num => {
+//   if(typeof num ==='number') return ;
+//   return num * 2;
+// });
+// console.log(data);
+
+//89
+// function getInfo(member) {
+//   member.name = "ritu";
+// }
+// const person = {name : "riya"};
+// getInfo(person);
+// console.log(person)
+
+//90
+// function Car() {
+//   this.make = "tata";
+//   return {make : 'kia'};
+// }
+// const myCar = new Car();
+// console.log(myCar.make);
+
+//91 
+// (() => {
+//   let x = (y = 10);
+// })();
+
+// console.log(typeof x)
+
+//92 
+// (() => {
+//   let x = y = 10;
+//   // let x;
+// })();
+
+// console.log(typeof y)
+
+//93
+// (() => {
+//   let x = 10;
+// })();
+
+// (() => {
+//   let x = 10;
+// })();
+
+// console.log(typeof x);
+
+//94
+// (() => {
+//   let x = y = 10;
+// })();
+
+// (() => {
+//   let x = y = 20;
+// })();
+
+// console.log(y);
+
+//95 
+// let x = 100;
+// (() => {
+//   var x = 20;
+// })();
+// console.log(x);
+
+//96 
+// console.log(!true - true);
+
+//97 
+// console.log(true + "10");
+
+//98
+// console.log(!false - false)
+
+//99
+// console.log(false + "20")
+
+//100
+console.log("i will perform good in interview 😇,is required after practicing😤 more and more hard work")
