@@ -1,6 +1,5 @@
 #JS-QUESTION
 
-
 /// js interview question 
 
 //1 
@@ -9,11 +8,17 @@
 // console.log(a==b)
 // console.log(a===b)
 
+// when we are comparing two array we actualy comparing two memmory location 
+// that's why here ans is false in both case
+
+
 //2
 // let a=[];
 // let b=a;
 // console.log(a==b)
 // console.log(a===b)
+
+// in this que we are puting a in b that's why memmory location is same so ans is true
 
 //3
 // let a = [20];
@@ -21,42 +26,61 @@
 // console.log(a[0] == b[0]);
 // console.log(a[0] === b[0]);
 
+// in this que element value is comparing 
+
 // 4
 // let z = [1,2,3,4]
 // let a = {name: "ritu"};
 // console.log(...z);
 
+// when we use ... is for destructuring and it convert array into normal form  
+
 // 5
 // console.log(typeof NaN);
+
+// Nan means not a number which is special type of number 
 
 //6
 // let data = 10 - - 10;
 // console.log(data)
 
+// 10 --10 = 10 + 10 = 20
 //7
 // const set = new Set([1,1,2,3,4]);
 // console.log(set)
+
+// set is a type of data type and it will remove all duplicate element
 
 //8
 // let data = {name: "ritu" };
 // console.log(delete data.name);
 
+// why it is giving true because it is telling i am deleted if not then it will give false
 //9
 // const data = {name : "ritu"};
 // console.log(delete data)
+
+// we can't delete data directly 
 
 //10
 // const data = ["ritu","riya","priya"];
 // const[y] = data;
 // console.log(y);
 
+// if i write z then also output is same if i write x,y then it will give ritu,riya
+
 //11
 // const data = {name: "ritu", age:20, skill:"React"};
 // how to get name property without . operator
+// const {name} = data;
+// console.log(name)
+
 
 //12
 // let data = {name : "ritu", age:20 , skill:"js" };
 // let info = {city :"nagpur" , mail:"@123"};
+// //how to merge two array
+
 // data = {...data,...info}
 // console.log(data)
 
@@ -72,32 +96,46 @@
 // data = {...data,...info}
 // console.log(data)
 
+// key position is same but the value is gone to change
+
 //15
 // const name = "ritu";
 // console.log(name());
+
+// can we use variable as function?
 
 //16
 // const result = false || {} || null;
 // console.log(result);
 
+// it will count first positive value
+
 //17
 // const result = null || false || '';
 // console.log(result);
+
+// if all values are false then it will take last value whatever is present in that
 
 //18
 // const result = [] || 0 || true;
 // console.log(result);
 
+// array is positive value
+
 //19
 // console.log(Promise.resolve(5));
 
+// it will return promise full fill and return value as 5
+
 //20
-// console.log('😇'==='😇')
+// console.log('😇'==='😇');
+
+// it will compare its uncode value
 
 //21
 // JSON.parse();
 // what is method will do?
-// A: parse json to javaSript value 
+// A: parse json to javaSript value    ---//correct
 // B: parse a javascript object to json
 // C: parses any javascript value to json
 // D: parses json to a javascript object only
@@ -111,6 +149,8 @@
 // }
 // getName();
 
+// it will through error because because let is not hosted before initilazation 
+
 //23
 // let name = "ritu";
 // function getName() {
@@ -118,14 +158,20 @@
 // } 
 // getName()
 
+// let has a block level scope 
+
 //24
 // console.log(`${(x => x)('I love')} to program`);
+
+// x is in arrow function and it not has any error so it will I love
 
 //25
 // output should be 6
 // function sumValues(x,y,z){
 //   return x + y + z;
 // }
+
+// how to destructure the array
 // console.log(sumValues(...[1,2,3]));
 // console.log([...1,2,3])
 // console.log([...[1,2,3]])
@@ -136,6 +182,8 @@
 // console.log(!typeof name === 'object');
 // console.log(!typeof name === 'String');
 
+// typeof name is string and we use ! so it will become false and when we compare it will flase
+
 //27
 // const name = "ritu";
 // const age = 20;
@@ -143,20 +191,27 @@
 // console.log(isNaN(name));
 // console.log(isNaN(age));
 
+// name is not a number true age is not a number false
+
 //28
 // let person = { name: 'ritu'};
-// //how can we modife person object
+// // //how can we modife person object
 // Object.seal(person);
+// // when we use seal we can't add more keys 
+// person.name = "riya";
 // console.log(person);
 
 //29
 // let data = [2,4,6,0];
-// //remove first element
+//remove first element
+// data.shift();
 // console.log(data);
+
 
 //30
 // let data = [2,4,6,0];
 // //remove last element
+// data.pop();
 // console.log(data);
 
 //31 
@@ -174,6 +229,7 @@
 
 //34
 // difference between map and forEach functon 
+// map function alway return something and forEach dosen't
 
 //35
 // let data = ["ritu","riya","priya"];
@@ -250,10 +306,10 @@
 //50
 // function fruit() {
 //   console.log(name);
-//   console.log(price);
+//   // console.log(price);
     
 //   var name = "apple";
-//   let price = 100;
+//   // let price = 100;
 // }
 // fruit();
 
@@ -303,7 +359,10 @@
 // let a =6;
 // let b= new Number(6);
 // console.log(a == b);
-// console.log(a === b)
+// console.log(a === b);
+// console.log(typeof b);
+// console.log(typeof a);
+
 
 //59
 // let name;
@@ -347,6 +406,8 @@
 //65
 // const sum = eval('10*10+5');
 // console.log(sum)
+
+// read this doc https://www.w3schools.com/jsref/jsref_eval.asp
 
 //66
 // const obj = {1:"a",2:"b",3:"c"};
@@ -555,4 +616,11 @@
 // console.log(false + "20")
 
 //100
-console.log("i will perform good in interview 😇,is required after practicing😤 more and more hard work")
+// console.log("i will perform good in interview 😇,is required after practicing😤 more and more hard work")
+
+//101
+// const data = ["ritu","riya","priya"];
+// const[y] = data;
+// console.log(y);
+// i want  only second name how i get ?
+// [,y]
