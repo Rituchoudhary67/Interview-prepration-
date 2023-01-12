@@ -671,3 +671,12 @@
 // }
 
 // conslusion :- arrow function is not hosted 
+
+//104
+//Difference between “ == “ and “ === “ operators.
+//Both are comparison operators. The difference between both the operators is that “==” is used to compare
+//values whereas, “ === “ is used to compare both values and types.
+//let a = 3;
+//let b = "3";
+//console.log(a==b)  ///true
+//console.log(a===b)   ///false because number is not equal to string
