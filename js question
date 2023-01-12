@@ -624,3 +624,16 @@
 // console.log(y);
 // i want  only second name how i get ?
 // [,y]
+
+//101
+//how to empty an array 
+// let arr = ["ab","bc","cd","de"]
+//there are basically three method 
+// 1. arr = [];
+// 2. arr.length = 0
+// 3. arr.splice(0,arr.length);
+// 4. while (arr.length)
+      {
+        arr.pop();
+      }
+   
