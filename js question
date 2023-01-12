@@ -637,3 +637,37 @@
         arr.pop();
       }
    
+//103
+//     ......Hosting....
+// it is a default behaviour of js in which a function or a variable can be use 
+// before declaration 
+
+
+// 1. variable hosting 
+
+// console.log(name);
+// var name = "ritu";       //undefined
+
+// console.log(name1);
+// let name1 = "ritu";       //erroe
+
+// console.log(name2);
+// const name2 = "ritu";       //error
+
+// conclusion is :- let and const variables are hosted but can't accessed 
+
+// 2. function hosting 
+
+// function call before declaring it is called hosting 
+
+// name();
+// function name() {
+//   console.log("ritu");
+// }
+
+// name()
+// var name = () => {
+//   console.log("ritu");
+// }
+
+// conslusion :- arrow function is not hosted 
