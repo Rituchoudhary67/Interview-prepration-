@@ -1,1 +1,32 @@
 #CSS QUESTION
+
+1.What is css?
+  CSS stands for Cascading Style Sheets
+  CSS is the language we use to style a Web page.
+  CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+
+2.What is box-model in css?
+  In CSS, the term "box model" is used when talking about design and layout.
+  All HTML elements can be considered as boxes.
+  The CSS box model is essentially a box that wraps around every HTML element.
+  It consists of: margins, borders, padding, and the actual content.
+  
+3.How to connect css with html?
+  CSS can be added to HTML documents in 3 ways:
+  Inline - by using the style attribute inside HTML elements
+    Ex: <h1 style="color:blue;">A Blue Heading</h1>
+  Internal - by using a <style> element in the <head> section
+    Ex: <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+           body {background-color: powderblue;}
+           h1   {color: blue;}
+           p    {color: red;}
+        </style>
+        </head>
+  External - by using a <link> element to link to an external CSS file
+    Ex:  <link rel="stylesheet" href="styles.css" />
+    
+3. 
+  
