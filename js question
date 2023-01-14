@@ -680,3 +680,35 @@
 //let b = "3";
 //console.log(a==b)  ///true
 //console.log(a===b)   ///false because number is not equal to string
+
+//105
+//What is Currying?   -----not clear
+
+// Transfomation of the function of multiple arguments into a function of single arguments in sequence
+   function curryFunc1(foo){
+      return function addA(a){
+         return function addB(b){
+             return function result() {
+                 console.log(a+b)
+              }
+          }
+       }
+     }
+   let addition = curryFunc1()(5)(6);
+   addition()
+  
+//106
+//what is Lexical Environment?
+
+//107
+// what is closuer?
+//functions bundled together with its lexical environment;
+function foo(){
+   let a = 2;
+   return function bar(){
+      console.log(a);
+   }
+ }
+
+ const b = foo();
+ b();
