@@ -712,3 +712,65 @@ function foo(){
 
  const b = foo();
  b();
+ 
+ //108
+ //hosting
+ //It is a behaviour in which function or a variable can be use before declaration  
+ //var is hosted but let and const are not hosted let give refrence error and const give syntax error
+ //Example: console.log(a);
+            var a = "ritu";  //undefine
+ //normal function get hosted but arraow function is not hosted.
+ //Exaple: name()
+           function name() {
+           console.log("ritu")
+           }
+           //ritu
+           name()  ///error
+           var name() => {
+                console.log("ritu");
+                }
+                
+//109
+//Promises
+//A Promise is an object representing the eventual completion or failure of an asynchronous operation. 
+  new Promise((resolve, reject) => {
+    // Promise Syntax
+  }) 
+
+//how many States of Promise?
+   pending,fullfilled,rejected
+ 
+//how to Handlers promise
+  .then and .catch
+  NOte: .catch handler does not catch errors occured in asynchronous functions like setTimeout
+ 
+
+ const promise =  new Promise((resolve, reject) => {
+   setTimeout(() => {
+      reject("Error")
+   })
+ })
+ console.log(promise); 
+
+ promise.then((result) => console.log(result))
+       .catch((err) => console.log(err)) 
+
+
+ async function handlePromise(){
+   try {
+      const result = await promise;
+      console.log(result);
+   } catch(err){
+      console.log(err)
+   }
+}
+handlePromise().catch(err => console.log(err));
+
+//110
+//what is memoization?
+ memoization is an optimization technique that makes applications more efficient and hence faster.
+ memoization basically works on two concept closer and higher order function
+ example of memoization is fibonaci series.
+ 
+ 
+
