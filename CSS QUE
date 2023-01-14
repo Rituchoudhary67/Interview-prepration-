@@ -29,4 +29,33 @@
     Ex:  <link rel="stylesheet" href="styles.css" />
     
 4.Margin and padding?
+  Content - The innermost part of the box. Content could be an image, text, heading, or something else. 
+  Padding - The inner space between the content and the border of our box.
+  Border - The perimeter of the box. Borders can be invisible or they could be a thick colored line. 
+  Margin - The outer space (or lack of space) surrounding the box.or we can say margin is the space between outline and border.
   
+  Difference : padding will take space from outside and margin will take from inside.
+  margin and padding both are transparant 
+  
+5.Did padding amd margin take -ve values?
+  yes we can give it both will also take -ve as well as positive value.
+  
+6.What is media query?
+  Media query is used to make our web site responsive
+  it allows us to create different layouts depending on the size of the viewport
+  
+7.What is em and rem?
+  em is a CSS unit relative to the font size of the parent element
+     When the size of the parent element changes, the size of the child changes automatically.
+  rem is a CSS unit relative to the font size of an html element. 
+  
+8.What is border and outline?
+  Border is created inside the element, where as outline is created outside the element.
+  The outline is NOT a part of the element's dimensions; the element's total width and height is not affected
+  
+9.what is flexbox?
+  The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+  Flexbox is a one-dimensional layout system that we can use to create a row or a column axis layout.
+  The flex container is inline,so another inline element will display next to it.
+ 
+10.what is grid system?
