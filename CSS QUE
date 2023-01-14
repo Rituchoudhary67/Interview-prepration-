@@ -59,4 +59,31 @@
   The flex container is inline,so another inline element will display next to it.
  
 10.what is grid system?
+   The grid is two dimentational layout system using row and coloum it is an advance version of table
    
+11.what are pseudo element(::) and pseudo class(:) ?
+   pseudo element(::) = A CSS pseudo-element is used to style specified parts of an element.
+                        For example, it can be used to:
+                        Style the first letter, or line, of an element
+                        Insert content before, or after, the content of an element
+   psedo class(:) = A pseudo-class is used to define a special state of an element.
+                    For example, it can be used to:
+                    Style an element when a user mouses over it
+                    Style visited and unvisited links differently
+                    Style an element when it gets focus
+                    Example: link,visited,hover,active
+                    
+12. what is nth child?
+    The :nth-child(n) selector matches every element that is the nth child of its parent.
+    Example: p:nth-child(odd) {
+               background: red;
+             }
+
+13.Why we use float property?
+   The float property specifies whether an element should float to the left, right, or not at all.
+   Note: Absolutely positioned elements ignore the float property!
+
+14. Difference between display none and visibility hidden?
+    visibility:hidden hides the element, but it still takes up space in the layout.
+    display:none removes the element from the document. It does not take up any space.
+ 
