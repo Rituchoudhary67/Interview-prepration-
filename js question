@@ -682,7 +682,7 @@
 //console.log(a===b)   ///false because number is not equal to string
 
 //105
-//What is Currying?   -----not clear
+//What is Currying?  
 
 // Transfomation of the function of multiple arguments into a function of single arguments in sequence
    function curryFunc1(foo){
