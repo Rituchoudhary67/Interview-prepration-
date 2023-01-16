@@ -87,3 +87,6 @@
     visibility:hidden hides the element, but it still takes up space in the layout.
     display:none removes the element from the document. It does not take up any space.
  
+15.what is self closing tag?
+   Some HTML tags (like img,input and br ) don't have their own content. These are known as self closing tags or empty tags. 
+   They look like this: A simple example: <br /> The br tag inserts a line break (not a paragraph break).
