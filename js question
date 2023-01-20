@@ -772,5 +772,5 @@ handlePromise().catch(err => console.log(err));
  memoization basically works on two concept closer and higher order function
  example of memoization is fibonaci series.
  
- 
+ //do replate que and practice logical que
 
