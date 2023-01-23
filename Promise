@@ -5,7 +5,16 @@ Promise ia an object representing the eventual completition or failure of an asy
 //when promises was not there we use call back but when there are so many call back then it becomes call back hell
 //example of before promises how we write asynchronos code using call back
 
+const cart = ["a","b","c"];
+createOrder(cart, function (orderId) {
+  procedToPayment(orderId);
+})
 
 
+//by using promise
+const cart = ["panipuri","Tari poha"]
 
-
+const myPromise = createOrder(cark);
+myPromise.then(function (orderId) {
+  procedToPayment(orderId)
+})
