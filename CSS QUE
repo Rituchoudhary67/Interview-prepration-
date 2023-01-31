@@ -90,3 +90,5 @@
 15.what is self closing tag?
    Some HTML tags (like img,input and br ) don't have their own content. These are known as self closing tags or empty tags. 
    They look like this: A simple example: <br /> The br tag inserts a line break (not a paragraph break).
+   
+16.
