@@ -1,1 +1,14 @@
 
+// How Javascript works?
+   Everthing in javascript happens inside an Execution context
+   Execution context is a big container in which whole javascript code is executed.
+   Executuion context containing two component
+   
+  -----------------EXECUTION CONTEXT---------------------------
+   1. Memmory/Variable Environment  2.Code/Thread of Execution
+      key:value                       >>>........code
+      a:10                            >>>........code
+      f:{...}                         >>>........code
+    ---------------EXECUTION CONTEXT---------------------------
+    
+    Javascript is a synchronus single-threaded language.
