@@ -30,6 +30,25 @@
    n:undefine--2--4                 ------------------------
    square:{....}                    |  Memory       code     
    square2:undefine-->4             |  num :2--4       >>...
-   square4:undefine-->16            |  ans :4--16        >>..
+   square4:undefine-->16            |  ans :4--16      >>..
        
+//what is callStack
+The call stack is used by JavaScript to keep track of multiple function calls.
+Example:-    function one() {
+                  two();
+              }
+              function two() {
+                   three();
+              }
+              function three() {
+                  console.log("call stack");
+               }
+               
+               
+               |      |     |      |    |three()|       |      |      |     |     |     |
+               |      |     |two() |    |two()  |       |two() |      |     |     |     |
+               | one()|     |one() |    |one()  |       |one() |      |one()|     |     |
+               |------|     |------|    |-------|       |------|      |-----|     |-----|
+----------------------------------------------CALLSTACK------------------------------------
+
                    
