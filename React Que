@@ -1,0 +1,39 @@
+//React interview question....
+1. What is React ?
+2. Features of React ?
+3. Unidirectional flow in React ?
+4. What is Virtual DOM ?
+5. Explain how Virtual DOM works ?
+6. Difference between Real DOM and Virtual DOM ?
+7. What is JSX ?
+8. How does browser understand JSX ?
+9. What is babel ?
+10. Explain useState hook ?
+11. What are statefull and stateless components ?
+12. What is a key in React ?
+13. Why is it necessary ?
+14. In what cases we should not use array index as key ?
+15. Why should we not use array index as key ?
+16. What are synthetic events ?
+17. What are controlled components ?
+18. What are uncontrolled components ?
+19. What is the difference between the two ?
+20. What are props in react ?
+21. What is the difference between props and state in react ?
+22. What are the differenct lifecycle methods ?
+23. What are side effects in react ? 
+24. What is the useEffect hook ?
+25. How can we use useEffect hook to implement the lifecycle methods ?
+26. What is useRef hook ?
+27. Explain some use cases for useRef hook ?
+28. What are Higher Order Components ?
+29. What is a Pure component ?
+30. What is prop drilling ?
+31. How can we solve the problem of prop drilling ?
+31. What is Context API ? How it can be used to solve prop drilling ?
+32. What are error boundaries ?
+33. useCallback hook 
+34. useMemo hook
+35. Difference between the two
+36. What is React.memo ?
+37. State management 
