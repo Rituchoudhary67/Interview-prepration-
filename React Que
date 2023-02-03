@@ -4,9 +4,26 @@
    Its aim is to allow developers to easily create fast user interfaces for websites and applications 
 
 2. Features of React ?
-   JSX
-   Components
-   One-way Data Binding
+   JSX -JSX stands for JavaScript XML.
+        JSX allows us to write HTML in React.
+        JSX makes it easier to write and add HTML in React.
+   Components-Components are independent and they are reusable bits of code.
+              Components are of two types, Class components and Function components
+              Class Components:
+              A class component must include the extends React.Component statement.
+              The component also requires a render() method, this method returns HTML.
+              Ex:- class Car extends React.Component {
+                   render() {
+                              return <h2>Hi, I am a Car!</h2>;
+                             }
+                   }
+              Function Components:
+              Function components can be written using much less code, are easier to understand
+              Ex:- function Car() {
+                     return <h2>Hi, I am a Car!</h2>;
+                   }
+   One-way Data Binding- it describes a one-way data flow where the data flows from the parent to the child component, it is known as
+                         the unidirectional flow of data.
    Virtual DOM
    Simplicity
    Performance
