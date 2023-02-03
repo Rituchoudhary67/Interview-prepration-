@@ -1,6 +1,16 @@
 //React interview question....
 1. What is React ?
+   A JavaScript library created by Facebook for building user interfaces
+   Its aim is to allow developers to easily create fast user interfaces for websites and applications 
+
 2. Features of React ?
+   JSX
+   Components
+   One-way Data Binding
+   Virtual DOM
+   Simplicity
+   Performance
+
 3. Unidirectional flow in React ?
 4. What is Virtual DOM ?
 5. Explain how Virtual DOM works ?
