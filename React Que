@@ -24,8 +24,12 @@
                    }
    One-way Data Binding- it describes a one-way data flow where the data flows from the parent to the child component, it is known as
                          the unidirectional flow of data.
-   Virtual DOM
-   Simplicity
+   Virtual DOM- The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory
+                and synced with the “real” DOM by a library such as ReactDOM.
+                the term “virtual DOM” is usually associated with React elements 
+               
+  Simplicity
+  
    Performance
 
 3. Unidirectional flow in React ?
@@ -64,3 +68,7 @@
 35. Difference between the two
 36. What is React.memo ?
 37. State management 
+38. Is the Shadow DOM the same as the Virtual DOM?
+    No, they are different. The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components.
+    The virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
+
