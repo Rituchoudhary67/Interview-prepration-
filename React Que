@@ -37,21 +37,70 @@
    Performance-React allows us to measure the performance of our apps using the Profiler in the React DevTools. 
 
 3. Unidirectional flow in React ?
-   --already answer
+   It is nothing but One-way Data Binding that describes a one-way data flow where the data flows from the parent to the child component, it is known as
+   this is known as unidirectional flow of data.
+   
 4. What is Virtual DOM ?
-5. Explain how Virtual DOM works ?
+   The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory
+   and synced with the “real” DOM by a library such as ReactDOM.
+   the term “virtual DOM” is usually associated with React elements 
+
+5. Explain how Virtual DOM works ?--don't know ////
+
 6. Difference between Real DOM and Virtual DOM ?
+   see the half ans is above
+   Real DOM                                                          Virtual DOM
+   DOM manipulation is very expensive                                DOM manipulation is very easy
+   There is too much memory wastage                                  No memory wastage
+   
 7. What is JSX ?
+   JSX -JSX stands for JavaScript XML.
+        JSX allows us to write HTML in React.
+        JSX makes it easier to write and add HTML in React.
+        
 8. How does browser understand JSX ?
+   As JSX is combination of HTML and JavaScript it is not supported by Browsers. So, if any 
+   file contains JSX file, Babeltranspiler converts the JSX into JavaScript objects
+   which becomes a valid JavaScript. Thus, browsers understands the code and executes.
+   
 9. What is babel ?
+   Babel is a JavaScript compiler, which is used for converting ECMAScript code to browser understandable code
+   
 10. Explain useState hook ?
+    The useState hook is a special function that takes the initial state as an argument and returns an array of two entries. 
+    Ex:- import { useState } from "react";
+         function FavoriteColor() {
+            const [color, setColor] = useState("");
+         }
+         
 11. What are statefull and stateless components ?
+    In React, a stateful component is a component that holds some state. Stateless components, by contrast, have no state.
+    Note that both types of components can use props.
+    
 12. What is a key in React ?
-13. Why is it necessary ?
+    A “key” is a special string attribute that we need to include when creating lists of elements in React.
+    Keys are used in React to identify which items in the list are changed, updated, or deleted. 
+    we can say that keys are used to give an identity to the elements in the lists
+    
+13. Why key is it necessary ?
+    Keys help React identify which items have changed, are added, or are removed.
+    
 14. In what cases we should not use array index as key ?
+    In cases where the array is sorted or an element is added to the beginning of the array, the index will be changed even though
+    the element representing that index may be the same. This results in unnecessary renders.
+    
 15. Why should we not use array index as key ?
+    It is not recommend using indexes for keys if the order of items may change. This can negatively
+    impact performance and may cause issues with component state.
+
 16. What are synthetic events ?
+    Synthetic events are that ReactJS reuses these events objects, by pooling them, which increase the performance
+    the synthetic events are onClick(), onBlur() and onChange(). 
+    
 17. What are controlled components ?
+    In React, Controlled Components are those in which form's data is handled by the component's state. It takes
+    its current value through props and makes changes through callbacks like onClick,onChange, etc.
+    Ex- 
 18. What are uncontrolled components ?
 19. What is the difference between the two ?
 20. What are props in react ?
