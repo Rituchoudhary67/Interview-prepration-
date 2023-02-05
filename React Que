@@ -34,9 +34,10 @@
    Simplicity- ReactJS uses JSX file which makes the application simple and to code as well as understand
                ReactJS is a component-based approach which makes the code reusable as your need. This makes it simple to use and learn.           
   
-   Performance
+   Performance-React allows us to measure the performance of our apps using the Profiler in the React DevTools. 
 
 3. Unidirectional flow in React ?
+   --already answer
 4. What is Virtual DOM ?
 5. Explain how Virtual DOM works ?
 6. Difference between Real DOM and Virtual DOM ?
