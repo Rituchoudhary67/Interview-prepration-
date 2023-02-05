@@ -100,26 +100,127 @@
 17. What are controlled components ?
     In React, Controlled Components are those in which form's data is handled by the component's state. It takes
     its current value through props and makes changes through callbacks like onClick,onChange, etc.
-    Ex- 
+    
 18. What are uncontrolled components ?
-19. What is the difference between the two ?
+    Uncontrolled Components are the components that are not controlled by the React state and are
+    handled by the DOM (Document Object Model).
+     
+19. What is the difference between the two  controlled components and uncontrolled components?
+    In a controlled component, form data is handled by a React component. The alternative is uncontrolled components,
+    where form data is handled by the DOM itself.
+    
 20. What are props in react ?
+    props stands for properties.
+    Props are arguments passed into React components. Props are passed to components via HTML attributes. 
+    Ex- const Hello = (props) => {
+            return (
+                     <div>
+                          <h2>Student {props.number}</h2>
+                     </div>
+                   )
+        }
+
+        function App() {
+          return (
+                  <div>
+                       <Hello number="1"/>
+                  </div>
+          )
+        }
+        export default App;
+        
 21. What is the difference between props and state in react ?
-22. What are the differenct lifecycle methods ?
+     props get passed to the component (similar to function parameters) whereas state is managed within 
+     the component (similar to variables declared within a function).
+     
+22. What are the different lifecycle methods ?
+    There are three categories of lifecycle methods: mounting, updating, and unmounting.
+    
+    Mounting:-
+    Mounting means putting elements into the DOM.
+    React has four built-in methods that gets called, in this order, when mounting a component:
+    constructor()
+    getDerivedStateFromProps()
+    render()
+    componentDidMount()
+    
+    Unmounting:-
+    when a component is removed from the DOM is called unmounting
+    one built-in method that gets called when a component is unmounted:
+    componentWillUnmount()
+    
+    updating:-
+    A component is updated whenever there is a change in the component's state or props.
+    it has five built-in methods 
+    getDerivedStateFromProps()
+    shouldComponentUpdate()
+    render()
+    getSnapshotBeforeUpdate()
+    componentDidUpdate()
+    
 23. What are side effects in react ? 
+    side effect is a part of useEffect Hooks
+    The useEffect Hook allows you to perform side effects in your components.
+    Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+    
 24. What is the useEffect hook ?
+    The useEffect Hook allow us to perform side effects in your components.
+    Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+    useEffect accepts two arguments. The second argument is optional.
+    useEffect(<function>, <dependency>)
+
+
 25. How can we use useEffect hook to implement the lifecycle methods ?
+    Mounting phase with componentDidMount.
+    Updating phase with shouldComponentUpdate and componentDidUpdate.
+    Unmounting phase with componentWillUnmount.
+
 26. What is useRef hook ?
+    It can be used to store a mutable value that does not cause a re-render when updated.
+    It can be used to access a DOM element directly.
+
 27. Explain some use cases for useRef hook ?
+    A very common use case for using useRef is for when, suppose we click on a button, and then on its 
+    click we want an input to come into focus. To do this, we would need to access the DOM element of 
+    input and then call its function focus() to focus the input
+
 28. What are Higher Order Components ?
+    A higher-order component (HOC) is an advanced technique in React for reusing component logic.
+    a higher-order component is a function that takes a component and returns a new component.
+
 29. What is a Pure component ?
+     A function is said to be pure if the return value is determined by its input values only 
+     and the return value is always the same for the same input values. 
+     
 30. What is prop drilling ?
+    Prop drilling is a situation where data is passed from one component through multiple interdependent 
+    components until we get to the component where the data is needed
+
 31. How can we solve the problem of prop drilling ?
+    The React context API is a fast way of avoiding prop drilling 
+    
 31. What is Context API ? How it can be used to solve prop drilling ?
+    The Context API helps share data between components which we can't easily share with props,
+    The React Context API provides a way to pass data through multiple nested levels of components 
+    without having to manually pass that data to each level
+    
 32. What are error boundaries ?
+    Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, 
+    log those errors, and display a fallback UI instead of the component tree that crashed
+
 33. useCallback hook 
-34. useMemo hook
-35. Difference between the two
+    The React useCallback Hook returns a memoized callback function.
+    it only runs when one of its dependencies update.so in this way it can improve performance.
+    
+34. useMemo hook?
+    The React useMemo Hook returns a memoized value.
+    The useMemo Hook only runs when one of its dependencies update.
+    This can improve performance.
+
+35. Difference between the two useCallback and useMemo hook?
+    the useCallback and useMemo Hooks are similar. The main difference is that useMemo returns
+    a memoized value and useCallback returns a memoized function
+
 36. What is React.memo ?
 37. State management 
 38. Is the Shadow DOM the same as the Virtual DOM?
