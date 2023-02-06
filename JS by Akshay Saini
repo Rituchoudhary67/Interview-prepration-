@@ -75,5 +75,14 @@ Example:-    function one() {
                    var name = () => {
                       console.log("hello from arrow function")
                    }
+---------------------------------------------UNDEFINE vs NOT DEFINED---------------------------------------------------
+"undefined" indicates that a variable has been declared but not given a value,
+while "not defined" indicates that a variable does not exist
 
+console.log(a);       //undefined
+var a = 10;
+console.log(a);       //10
+console.log(x);      //not defined
                    
+In my words:- undefine means browser give the memory location to variable "a" but on line no 82 it has not assign the value that why 
+              it is giving undefine and in case of x, x is not declared it is not assign any memory loaction that's why not defined.
