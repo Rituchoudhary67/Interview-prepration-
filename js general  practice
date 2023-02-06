@@ -1,0 +1,11 @@
+console.log("Hello, World!");
+// const x = 1
+// let y = 5
+
+// // console.log(x, y)  //1,5  
+// y += 10
+// // console.log(x, y)  //1,15
+// y = 'sometext'
+// // console.log(x, y)     //1,sometext
+// x = 4             //it through erroe because we declare x as constant so we 
+//                   //can't later change it 
