@@ -22,3 +22,25 @@ t.forEach(value => {
   console.log(value)       //1 -1 3 5  each in new line
   
 })   
+
+////////in react concat method is prefer to add the items
+const t = [1, -1, 3]
+
+const t2 = t.concat(5)
+
+console.log(t)  // [1, -1, 3] is printed
+console.log(t2) // [1, -1, 3, 5] is printed
+
+///map method in react
+const t = [1, 2, 3]
+
+const m1 = t.map(value => value * 2)
+console.log(m1)   // [2, 4, 6] is printed
+
+//destructuring in array
+onst t = [1, 2, 3, 4, 5]
+
+const [first, second, ...rest] = t
+
+console.log(first, second)  // 1, 2 is printed
+console.log(rest)          // [3, 4, 5] is printed
