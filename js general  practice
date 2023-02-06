@@ -44,3 +44,36 @@ const [first, second, ...rest] = t
 
 console.log(first, second)  // 1, 2 is printed
 console.log(rest)          // [3, 4, 5] is printed
+
+----------------------------------------------------------------------------------------------------------------------------
+Object
+const object1 = {
+  name: 'Ritu Choudhary',
+  age: 20,
+  education: 'Bsc',
+}
+
+const object2 = {
+  name: 'Full Stack web application development',
+  level: 'intermediate studies',
+  size: 5,
+}
+
+const object3 = {
+  name: {
+    first: 'Sujata',
+    last: 'Sonwane',
+  },
+  grades: [2, 3, 5, 3],
+  department: 'Nagpur University',
+}
+console.log(object1.name)         // Ritu Choudhary is printed
+const fieldName = 'age' 
+console.log(object1[fieldName])    // 20 is printed
+
+object1.address = 'Nagpur'
+object1['secret number'] = 441110
+console.log(object1.address)    //Nagpur is printed
+console.log(object1['secret number'])
+
+
