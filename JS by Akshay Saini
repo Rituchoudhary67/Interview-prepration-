@@ -110,3 +110,12 @@ let obj = {
 }
 obj.func1();
 obj.func2();
+
+---------------------------------------The Scope chain, Scope and Lexical Environment---------------------------------------
+The scope chain is a way to link or provide a systematic access to all variables and other functions that 
+the current execution context (function in this case) has access to
+
+
+
+
+
