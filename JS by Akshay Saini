@@ -111,7 +111,67 @@ let obj = {
 obj.func1();
 obj.func2();
 
+// console.log("hello")
+ 
+// console.log(this);
+
+// function fun() {
+//     console.log(this);
+// }
+// fun()
+
+// var name = "ritu";
+
+// let obj = {
+//     name:"ravie",
+//     func1() {
+//         console.log(this.name);
+//     },
+//     func2: () => {
+//        console.log(this.name);
+//     }
+// }
+// obj.func1();
+// obj.func2();
+
+// function ritu() {
+//     console.log(this);    //window object
+//     function riya() {
+//         console.log(this)      //window object
+//     }
+//     riya()
+// }
+// ritu();
+
+const obj = {
+    xyz : function() {
+        console.log(this)   //obj i.e refrence of parent obj
+        function p() {
+            console.log(this)   //print window object
+            const obj2 = {
+                name : "ritu",
+                q() {
+                    console.log(this)     //obj2 
+                    const r = () => {
+                        console.log(this)  //it is arrow fun and it is printing obj2 because 
+                                          //this in arrow function behave accouring to it lecical parent
+                       console.log("this is started now there are lots of thing to known");
+                   }
+                    r();
+                },
+                
+            }
+            obj2.q();
+        }
+        p()   
+    }
+}
+obj.xyz()
+//note :- "this" in arrow function behave accourding to its lecical parents not necessary it always point window object
+           some time its pointing to object it because of lecical scoping 
+
 ---------------------------------------The Scope chain, Scope and Lexical Environment---------------------------------------
+
 The scope chain is a way to link or provide a systematic access to all variables and other functions that 
 the current execution context (function in this case) has access to
 
