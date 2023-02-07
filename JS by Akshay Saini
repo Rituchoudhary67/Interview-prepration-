@@ -175,7 +175,28 @@ obj.xyz()
 The scope chain is a way to link or provide a systematic access to all variables and other functions that 
 the current execution context (function in this case) has access to
 
+code :-
+        function a(){                       |                       |
+        var b = 10;                         |   |memory  code |     |
+          function c() {             c()=>  |   |c.log(b)     |     |
+              console.log(b)                |   |🟨           |     |
+            }                               |   |--------------     |
+         c()                                |                       | 
+        }                                   |   |memory   code |    |
+        a()                                 |   | b:u=10       |
+                                     a() => |   | c: {..}      |
+                                            |   | 🟨          |
+                                            |   |--------------|
+                                            |
+                                            |   |memory    code|
+                                            |   |a:{...}       |
+                                     gec    |   |🟨           | 
+                                            |   |--------------|
+                                            |-------------------
 
+in this case a global execution context is created inside that we have a() function then gec of a() in that we have
+b and another function c() inside c() fun we are loging b , but b is not present inside c() fun then it goes for its
+lecical scope and found that b is present and then it is printing b as 10 it becase of scoping.....😮‍💨
 
 
 
