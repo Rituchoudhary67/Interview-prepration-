@@ -86,3 +86,27 @@ console.log(x);      //not defined
                    
 In my words:- undefine means browser give the memory location to variable "a" but on line no 82 it has not assign the value that why 
               it is giving undefine and in case of x, x is not declared it is not assign any memory loaction that's why not defined.
+             
+--------------------------------------This in function-------------------------------------------------------------------
+console.log("hello")           //hello
+ 
+console.log(this);             //window object
+
+function fun() {
+    console.log(this);       //when we write this inside fun it will find its obj but here is no obj then it will print window obj 
+}
+fun()
+
+var name = "ritu";
+
+let obj = {
+    name:"ravie",
+    func1() {
+        console.log(this.name);        //it is present inside obj thats why it refer that obj and print ravie
+    },
+    func2: () => {
+       console.log(this.name);       //this is arrow fun which is not pointing this obj it will go for window obj and print ritu
+    }
+}
+obj.func1();
+obj.func2();
