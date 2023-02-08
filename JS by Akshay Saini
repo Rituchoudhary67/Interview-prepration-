@@ -227,3 +227,25 @@ const variable before it is declared, is a syntax error, so the code will simply
 
 console.log(b);   // syntax error
 const b = 20;
+
+-------------------------------syntax error😤 VS reference error😤 VS type error--------------------------------------------
+
+Syntax error:-An exception caused by the incorrect use of a pre-defined syntax. 
+              Syntax errors are detected while compiling or parsing source code.
+              For example, 
+              if we leave off a closing brace ( } ) when defining a JavaScript function, then we get a syntax error.
+
+Reference error:- The ReferenceError object represents an error when a variable that doesn't exist (or hasn't yet been initialized)
+                  in the current scope is referenced.
+                  console.log(a);  //refrence error
+                  let a = 10;
+                  console.log(x);  // x is not present in the code then also it will give reference error 
+Type Error:- The TypeError object represents an error when an operation could not be performed, typically (but not exclusively)
+             when a value is not of the expected type.
+             
+***Difference between syntax error reference error type error*******
+ReferenceError: Raised when an invalid reference is used.
+SyntaxError: Raised when a syntax error occurs while parsing JavaScript code. 
+TypeError: Raised when the type of a variable is not as expected. 
+
+
