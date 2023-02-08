@@ -183,16 +183,16 @@ code :-
             }                               |   |--------------     |
          c()                                |                       | 
         }                                   |   |memory   code |    |
-        a()                                 |   | b:u=10       |
-                                     a() => |   | c: {..}      |
-                                            |   | 🟨          |
-                                            |   |--------------|
-                                            |
-                                            |   |memory    code|
-                                            |   |a:{...}       |
-                                     gec    |   |🟨           | 
-                                            |   |--------------|
-                                            |-------------------
+        a()                                 |   | b:u=10       |    |
+                                     a() => |   | c: {..}      |    |
+                                            |   | 🟨          |    |
+                                            |   |--------------|    |
+                                            |                       |
+                                            |   |memory    code|    |
+                                            |   |a:{...}       |    |
+                                     gec    |   |🟨           |    |
+                                            |   |--------------|    |
+                                            |-----------------------|
 
 in this case a global execution context is created inside that we have a() function then gec of a() in that we have
 b and another function c() inside c() fun we are loging b , but b is not present inside c() fun then it goes for its
