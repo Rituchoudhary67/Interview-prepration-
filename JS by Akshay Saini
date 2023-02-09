@@ -268,11 +268,31 @@ var a = 10;
    console.log(c);   //30
  }
   console.log(a);   // 100
-  console.log(b);   // refrence Errori.e b is not define
-  console.log(c);     // c is not define 
+  console.log(b);   // refrence Error i.e b is not define
+  console.log(c);     // Error i.e c is not define 
 
 why this is happening 🤔?
 because let and const are having block scope i.e we can't access outside the currly brackect "{}"
 
 NOTE:- here a is assign as 10 but after it goes to line no 263 is become 100 and after completing the backet then also a is 100
        why??? because a is assign as global variable that can access anywhere in code.
+
+what is shadowing in js ?
+In programming, shadowing occurs when a variable declared in a certain scope (e.g. a local variable) has the same name as a 
+variable in an outer scope(e.g. a global variable). When this happens, the outer variable is said to be shadowed by the inner variable.
+
+Example:
+var a = 10;
+let b = 20;
+const c = 30;
+{
+  var a = 100;
+  let b = 200;
+  const c = 300;
+  console.log(a);  //100
+  console.log(b);   //200
+  console.log(c);   //300
+}
+console.log(a)  //100
+console.log(b)  //20
+console.log(c)   //30
