@@ -248,7 +248,7 @@ ReferenceError: Raised when an invalid reference is used.
 SyntaxError: Raised when a syntax error occurs while parsing JavaScript code. 
 TypeError: Raised when the type of a variable is not as expected. 
 
-------------------------what are BLOCK and SHADOWING in js-----------------------------------------------------------------------
+-------------------------------------what are BLOCK😵 and SHADOWING🤔 in js--------------------------------------------------------
 
 what is block?
 block is define by currly braces "{}".
