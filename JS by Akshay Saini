@@ -248,4 +248,31 @@ ReferenceError: Raised when an invalid reference is used.
 SyntaxError: Raised when a syntax error occurs while parsing JavaScript code. 
 TypeError: Raised when the type of a variable is not as expected. 
 
+------------------------what are BLOCK and SHADOWING in js-----------------------------------------------------------------------
 
+what is block?
+block is define by currly braces "{}".
+blocks are also known as compund statement.
+
+what is block scope?
+all the variables and function we can access inside the block are know as block scope.
+
+console.log("Hello, World!");
+var a = 10; 
+{
+   var a = 100;
+   let b = 20;
+   const c = 30;
+   console.log(a);   //100
+   console.log(b);  //20
+   console.log(c);   //30
+ }
+  console.log(a);   // 100
+  console.log(b);   // refrence Errori.e b is not define
+  console.log(c);     // c is not define 
+
+why this is happening 🤔?
+because let and const are having block scope i.e we can't access outside the currly brackect "{}"
+
+NOTE:- here a is assign as 10 but after it goes to line no 263 is become 100 and after completing the backet then also a is 100
+       why??? because a is assign as global variable that can access anywhere in code.
