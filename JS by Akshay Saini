@@ -352,3 +352,11 @@ function z() {
 }
 z();
 // the output is 15 and 300
+
+****Advantages of Closures*****
+- Module Design Pattern
+- Currying
+- Function like once
+- maintaining state in async world
+- setTimeouts
+- Iterators
