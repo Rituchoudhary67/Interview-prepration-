@@ -701,7 +701,7 @@
 //what is Lexical Environment?
 
 //107
-// what is closuer?
+// what is Closure?
 //functions bundled together with its lexical environment;
 function foo(){
    let a = 2;
