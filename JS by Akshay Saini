@@ -360,3 +360,69 @@ z();
 - maintaining state in async world
 - setTimeouts
 - Iterators
+
+-------------------------------------------🕑SetTimeout⏳--------------------------------------------------------------
+
+1.what is the output of following que???
+
+function x() {
+    for(var i =1;i<=5;i++) {
+        setTimeout(function() {
+            console.log(i)
+        },i*1000)
+    }
+}
+x();
+
+//output
+6    1sec
+6    2sec
+6    3sec
+6    4sec
+6    5sec
+
+2.guess the output ???
+
+function x() {
+    for(let i =1;i<=5;i++) {
+        setTimeout(function() {
+            console.log(i)
+        },i*1000)
+    }
+}
+x();
+
+//output
+1    1sec
+2    2sec
+3    3sec
+4    4sec
+5    5sec
+
+//here why the output is like this ????
+because here first of all we are using let which is having block scope and it is following the concept of clouser
+and at every point of time here the new instance is created of thats why at every second of time the value is changed.
+
+3.let make this same output while using var keyword?? can we make it?? it is possible?
+
+ans is yes we can make this while using var keyword
+but how????
+
+function x() {
+ for(var i =1;i<=5;i++){
+    function closed(i) {
+        setTimeout(function() {
+            console.log(i);
+        },i*1000);
+    }
+    closed(i)
+ }
+}
+x()
+
+//output
+1    1sec
+2    2sec
+3    3sec
+4    4sec
+5    5sec
