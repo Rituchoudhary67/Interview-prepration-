@@ -15,9 +15,9 @@
 ----------------------------------------------------------------------------------------------------------------------------------------
 //How Javascript code is executed🤔? what is call stack💭?
   js code is executed line by line first it goes in memmory creation phase in that everything is undefine then second it goes inside 
-  code phase then everything is run and the value is assigned to the variable/function 
+  code phase here everything is run and the value is assigned to the variable/function 
   
-  EXAMPLE:-----program to findout the square of number
+  EXAMPLE:-----program to find out the square of number
                var n = 2;
                function square(num) {
                  var ans = num * num ;
@@ -61,7 +61,7 @@ Example:-    function one() {
   console.log(sum);
   let sum = a+b;    //reference error
   
-  Using a const variable before it is declared, is a syntax error, so the code will simply not run.
+  Using a const variable before it is declared, it give syntax error, so the code will simply not run.
   console.log(sum);
   const sum = 10; ///syntax error
   
@@ -84,7 +84,7 @@ var a = 10;
 console.log(a);       //10
 console.log(x);      //not defined
                    
-In my words:- undefine means browser give the memory location to variable "a" but on line no 82 it has not assign the value that why 
+In my words:- undefine means browser give the memory location to variable "a" but on line no 82 it has not assign the value that's why 
               it is giving undefine and in case of x, x is not declared it is not assign any memory loaction that's why not defined.
              
 --------------------------------------This in function-------------------------------------------------------------------
@@ -97,8 +97,8 @@ function fun() {
 }
 fun()
 
+Ex :-
 var name = "ritu";
-
 let obj = {
     name:"ravie",
     func1() {
@@ -168,7 +168,7 @@ const obj = {
 }
 obj.xyz()
 //note :- "this" in arrow function behave accourding to its lecical parents not necessary it always point window object
-           some time its pointing to object it because of lecical scoping 
+           sometime it is pointing to object its because of lecical scoping 
 
 ---------------------------------------The Scope chain, Scope and Lexical Environment---------------------------------------
 
