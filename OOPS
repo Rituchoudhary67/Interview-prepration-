@@ -1,0 +1,37 @@
+Day 1 : Class, Object, Access Modifiers
+1. What is a Class in OOPs?
+  A class is a blueprint or template for creating objects.
+  It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.
+Example:
+          class Car {
+              String color;
+              void drive() {
+                  System.out.println("Car is driving");
+              }
+          }
+2. What is an Object in OOPs?
+  An object is an instance of a class. It represents a real-world entity and has its own values for the properties defined by its class.
+
+Example:  Car myCar = new Car();  // 'myCar' is an object of class 'Car'
+          myCar.color = "Red";
+          myCar.drive();
+3. How are Class and Object related?
+    A class defines the structure and behavior (attributes and methods), while an object is a real-world instance of the class.
+    Multiple objects can be created from one class.
+
+4. What are Access Modifiers?
+    Access modifiers control the visibility (accessibility) of classes, methods, and variables.
+    They decide where these members can be accessed from.
+
+5. Types of Access Modifiers in Java?
+    There are four types:
+    
+    Private: Accessible only within the class.
+    
+    Default (no keyword): Accessible within the same package.
+    
+    Protected: Accessible within the same package and subclasses in different packages.
+    
+    Public: Accessible from anywhere.
+
+
