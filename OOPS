@@ -35,3 +35,46 @@ Example:  Car myCar = new Car();  // 'myCar' is an object of class 'Car'
     Public: Accessible from anywhere.
 
 
+
+Day 2: constructor, Destructor and Methods
+1. What is constructor in java?
+   Constructor in java is a method that is automatically called when the object in class is created. It has the 
+   same name as class name and does not have return type. Constructor are used to initialize the object state.
+
+2. what are the different type of constructor?
+   i) Default Constructor  ii)No arguement Constructor  iii)Parameterized Constructor   iv)Copy Constructor
+
+3. Can a construtor be private in java?
+   NO
+
+4. What is constructor chaining?
+   Constructor chaining is the process of calling one constructor from another constructor in the same class or parent class.
+   It is achieved by using this() and super(). Copy Constructor is used here.
+
+5. What is the difference between instance method and static method?
+   Instance method: It belongs to object, can access instance variables, require object creation to call
+   Static method: It belongs to class, can't access instance variables, can be called using class name
+
+6.What is method overloading in java?
+  Method overloading is havong multiple methods with same name but different parameter(number, type or order) in same class. 
+  It provides compile time polymorphism
+
+7. What is method overriding?
+   Method overriding allows a subclass to provide ite own implementaion already define in its parent class, enabling runtime polymorphim
+
+8. What is the purpose of main method in java?
+   The main method is entry point of any java application. It must be
+   *public    *static    *void
+
+9. Can we declare method as abstract and final both?
+    No, Abstract method must be overridden by subclass while final method cannot be overridden. These are contradictory 
+    concept and cannot be used together.
+
+10. What is method hiding in java?
+    Method hiding occurs when a subclass defines a static method with same signature as a static method in parent class. 
+    The parent class method is 'hidden' in the subclass, but not override.
+
+11. What is native method in java?
+    A native method is a method whose implementation is written in another language and is platform dependent. It is declared
+    with native keyword and doesnt have body.
+
