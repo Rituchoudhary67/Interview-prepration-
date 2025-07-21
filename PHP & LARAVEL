@@ -1,0 +1,290 @@
+### ✅ Top 50 PHP Interview Questions with Answers
+
+---
+
+#### 🔹 PHP Basics (Core Language)
+
+**1. What is PHP and what are its advantages?**
+PHP (Hypertext Preprocessor) is a server-side scripting language designed for web development.
+**Advantages:** Open-source, platform-independent, supports databases, large community, fast development.
+
+**2. Difference between echo, print, and print\_r()?**
+
+* `echo` – Outputs one or more strings (faster)
+* `print` – Outputs a string (returns 1)
+* `print_r()` – Prints human-readable info about variables (especially arrays)
+
+**3. How is PHP executed on the server?**
+PHP scripts are executed by the server (Apache, Nginx, etc.) using the PHP interpreter. Output is sent as HTML to the browser.
+
+**4. What are the data types in PHP?**
+String, Integer, Float, Boolean, Array, Object, NULL, Resource.
+
+**5. Difference between == and ===?**
+
+* `==` compares values only
+* `===` compares values and types
+
+**6. include vs require vs include\_once vs require\_once?**
+
+* `include` – Gives warning if file not found, script continues
+* `require` – Fatal error if file not found, script stops
+* `_once` – Includes file only once, avoids redeclaration
+
+**7. isset() vs empty()?**
+
+* `isset()` – Returns true if variable is set and not NULL
+* `empty()` – Returns true if variable is empty (0, "", NULL, false)
+
+**8. How to define a constant?**
+
+```php
+define("PI", 3.14);
+echo PI;
+```
+
+**9. Variable scopes in PHP?**
+
+* Global
+* Local
+* Static
+
+**10. Error handling in PHP?**
+Use `try-catch`, `set_error_handler()`, or `error_reporting()`.
+
+```php
+try {
+  // code
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
+```
+
+---
+
+#### 🔹 Control Structures and Functions
+
+**11. PHP loops?**
+
+* `for`, `while`, `do-while`, `foreach`
+
+**12. Pass by value vs pass by reference?**
+
+```php
+function byValue($x) {
+  $x = 10;
+}
+function byReference(&$x) {
+  $x = 10;
+}
+```
+
+**13. What is recursion?**
+A function that calls itself.
+
+```php
+function factorial($n) {
+  return $n <= 1 ? 1 : $n * factorial($n - 1);
+}
+```
+
+**14. Return multiple values?**
+Use arrays:
+
+```php
+return [1, 2, 3];
+```
+
+**15. What is a callback function?**
+A function passed as argument to another function.
+
+---
+
+#### 🔹 Arrays and Strings
+
+**16. Types of arrays?**
+
+* Indexed
+* Associative
+* Multidimensional
+
+**17. Array functions?**
+`count()`, `array_merge()`, `array_push()`, `in_array()`
+
+**18. Sort an array?**
+`sort()`, `asort()`, `ksort()`
+
+**19. String functions?**
+`strlen()`, `strtoupper()`, `str_replace()`, `strpos()`
+
+**20. Reverse a string?**
+`strrev("hello")` → "olleh"
+
+---
+
+#### 🔹 Superglobals and Form Handling
+
+**21. Superglobals?**
+`$_GET`, `$_POST`, `$_REQUEST`, `$_SESSION`, `$_COOKIE`, `$_FILES`, `$_SERVER`
+
+**22. Difference: $\_GET vs $\_POST?**
+
+* `$_GET`: URL visible, limited data
+* `$_POST`: More secure, larger data
+
+**23. Validate form input?**
+
+```php
+if (empty($_POST["email"])) {
+  echo "Email required";
+} elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+  echo "Invalid email";
+}
+```
+
+**24. Prevent form resubmission?**
+Use Post/Redirect/Get pattern (header redirection).
+
+**25. Upload a file?**
+
+```php
+move_uploaded_file($_FILES['file']['tmp_name'], "uploads/" . $_FILES['file']['name']);
+```
+
+---
+
+#### 🔹 Sessions, Cookies, Security
+
+**26. Start a session?**
+
+```php
+session_start();
+$_SESSION["user"] = "Ritu";
+```
+
+**27. Session vs Cookie?**
+
+* Session: server-side, more secure
+* Cookie: client-side, stored in browser
+
+**28. Cookie handling?**
+
+```php
+setcookie("user", "Ritu", time() + 3600);
+echo $_COOKIE["user"];
+```
+
+**29. Secure input?**
+Use `htmlspecialchars()`, `filter_input()`
+
+**30. What is SQL Injection?**
+Malicious SQL inserted via input fields.
+**Prevention:** Prepared statements, validation
+
+---
+
+#### 🔹 File Handling
+
+**31. File read/write?**
+
+```php
+$f = fopen("file.txt", "w");
+fwrite($f, "Hello");
+fclose($f);
+```
+
+**32. fopen(), fread(), fwrite(), fclose()?**
+Open, read, write, and close file handles.
+
+**33. Check if file exists?**
+
+```php
+file_exists("file.txt");
+```
+
+**34. Upload file to directory?**
+Use `move_uploaded_file()` as in Q25.
+
+---
+
+#### 🔹 OOP in PHP
+
+**35. Class vs Object?**
+Class is a blueprint; object is an instance.
+
+**36. Inheritance?**
+
+```php
+class A {}
+class B extends A {}
+```
+
+**37. Access modifiers?**
+
+* `public` – Accessible anywhere
+* `private` – Within class only
+* `protected` – Class and subclasses
+
+**38. Constructor/Destructor?**
+
+```php
+function __construct() {}
+function __destruct() {}
+```
+
+**39. Interface?**
+Defines method structure, implemented by class.
+
+**40. Abstract class?**
+Cannot be instantiated, can have abstract & normal methods.
+
+**41. \$this keyword?**
+Refers to the current object.
+
+**42. Method overloading/overriding?**
+
+* Overloading not supported like Java.
+* Overriding done via inheritance.
+
+---
+
+#### 🔹 PHP + MySQL
+
+**43. Connect to DB?**
+
+```php
+$conn = mysqli_connect("localhost", "root", "", "test");
+```
+
+**44. mysqli vs PDO?**
+
+* `mysqli` – procedural + OOP, only MySQL
+* `PDO` – OOP only, supports multiple DBs
+
+**45. CRUD operations?**
+Use SQL + PHP (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)
+
+**46. Prevent SQL injection?**
+Use `mysqli_real_escape_string()` or prepared statements
+
+---
+
+#### 🔹 Advanced PHP
+
+**47. What are Traits?**
+Used to include common methods in multiple classes.
+
+**48. What is Composer?**
+Dependency manager for PHP. Like npm for Node.js.
+
+**49. Procedural vs OOP?**
+
+* Procedural: linear, function-based
+* OOP: class/object-based
+
+**50. Namespaces in PHP?**
+Used to avoid name conflicts.
+
+```php
+namespace App\Controllers;
+```
