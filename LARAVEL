@@ -1,0 +1,296 @@
+### ✅ Top 50 Laravel Interview Questions with Answers
+
+---
+
+#### 🔹 Laravel Basics
+
+**1. What is Laravel?**
+Laravel is an open-source PHP framework used to build modern web applications following the MVC (Model-View-Controller) architectural pattern.
+
+**2. What are the key features of Laravel?**
+Routing, Middleware, Eloquent ORM, Blade templating engine, Artisan CLI, Migrations, Authentication, Queues.
+
+**3. What is MVC in Laravel?**
+MVC separates the application into three components:
+
+* Model (business logic)
+* View (UI)
+* Controller (request handling)
+
+**4. How to install Laravel?**
+Using Composer:
+
+```bash
+composer create-project laravel/laravel projectname
+```
+
+**5. What is Artisan?**
+Artisan is Laravel's command-line tool for performing repetitive tasks such as migrations, seeding, generating models/controllers.
+
+---
+
+#### 🔹 Routing and Middleware
+
+**6. What is routing in Laravel?**
+Routing defines the URL structure and links them to controllers or closures.
+
+```php
+Route::get('/home', [HomeController::class, 'index']);
+```
+
+**7. What are route types in Laravel?**
+
+* GET, POST, PUT, DELETE, PATCH
+* Route::resource()
+* Route::group()
+
+**8. What is named route?**
+
+```php
+Route::get('/user', 'UserController@index')->name('user.index');
+```
+
+**9. What is middleware in Laravel?**
+Middleware filters HTTP requests (e.g., auth, logging).
+
+```php
+Route::middleware('auth')->group(...);
+```
+
+**10. How to create middleware?**
+
+```bash
+php artisan make:middleware CheckUser
+```
+
+---
+
+#### 🔹 Controllers and Requests
+
+**11. How to create a controller?**
+
+```bash
+php artisan make:controller UserController
+```
+
+**12. What is a resource controller?**
+It handles CRUD automatically.
+
+```php
+Route::resource('users', UserController::class);
+```
+
+**13. How to get input data in Laravel?**
+
+```php
+$request->input('name');
+```
+
+**14. How to validate form data?**
+
+```php
+$request->validate(['name' => 'required|max:255']);
+```
+
+**15. What are form requests?**
+Custom request classes for validation logic.
+
+```bash
+php artisan make:request StoreUserRequest
+```
+
+---
+
+#### 🔹 Models and Eloquent ORM
+
+**16. What is Eloquent ORM?**
+Laravel’s built-in ORM for interacting with the database using models.
+
+**17. How to create a model with migration?**
+
+```bash
+php artisan make:model Product -m
+```
+
+**18. Eloquent methods?**
+`all()`, `find()`, `where()`, `create()`, `update()`, `delete()`
+
+**19. What are accessors and mutators?**
+They allow customizing attributes when getting/setting values in a model.
+
+**20. What are relationships in Laravel?**
+
+* One to One
+* One to Many
+* Many to Many
+* Has One Through
+* Polymorphic
+
+---
+
+#### 🔹 Migrations and Seeders
+
+**21. What are migrations in Laravel?**
+Version control for the database schema.
+
+```bash
+php artisan migrate
+```
+
+**22. How to create a migration?**
+
+```bash
+php artisan make:migration create_users_table
+```
+
+**23. What are seeders?**
+Used to populate DB tables with sample/test data.
+
+```bash
+php artisan db:seed
+```
+
+**24. How to rollback migration?**
+
+```bash
+php artisan migrate:rollback
+```
+
+**25. What are factories?**
+Used to generate fake data using model factories and Faker library.
+
+---
+
+#### 🔹 Blade Templating Engine
+
+**26. What is Blade?**
+Laravel's templating engine that allows using PHP in views with `{{ }}` and `@` directives.
+
+**27. Common Blade directives?**
+`@if`, `@foreach`, `@extends`, `@section`, `@yield`
+
+**28. How to pass data to a view?**
+
+```php
+return view('user', ['name' => 'Ritu']);
+```
+
+**29. Blade layout inheritance?**
+
+```php
+@extends('layout')
+@section('content') Hello @endsection
+```
+
+**30. How to include a view in another view?**
+
+```php
+@include('header')
+```
+
+---
+
+#### 🔹 Authentication and Authorization
+
+**31. How does Laravel handle authentication?**
+Using built-in `Auth` facade, routes, and views for login/register.
+
+**32. How to create auth scaffolding?**
+
+```bash
+composer require laravel/ui
+php artisan ui bootstrap --auth
+```
+
+**33. How to protect routes with auth middleware?**
+
+```php
+Route::middleware(['auth'])->group(...);
+```
+
+**34. What is authorization in Laravel?**
+Controls what actions a user can perform (gates and policies).
+
+**35. What is a policy?**
+Used to authorize actions for a model.
+
+```bash
+php artisan make:policy PostPolicy --model=Post
+```
+
+---
+
+#### 🔹 Advanced Concepts
+
+**36. What is service provider in Laravel?**
+A central place to configure and register bindings, listeners, etc.
+
+**37. What is a facade in Laravel?**
+Static interface to classes in the service container.
+
+**38. What is service container?**
+A powerful tool for dependency injection.
+
+**39. What is dependency injection?**
+Providing class dependencies through constructor or method injection.
+
+**40. What are jobs and queues?**
+Used to defer time-consuming tasks using workers.
+
+```bash
+php artisan queue:work
+```
+
+---
+
+#### 🔹 Testing and Debugging
+
+**41. How to write tests in Laravel?**
+
+```bash
+php artisan make:test UserTest
+```
+
+**42. What is PHPUnit?**
+Default testing framework used by Laravel.
+
+**43. What is Laravel Telescope?**
+Debug assistant tool to monitor requests, queries, exceptions.
+
+**44. How to log messages in Laravel?**
+
+```php
+Log::info('Message');
+```
+
+**45. How to handle exceptions globally?**
+Using `App\Exceptions\Handler` class.
+
+---
+
+#### 🔹 Optimization and Deployment
+
+**46. How to clear cache in Laravel?**
+
+```bash
+php artisan config:clear
+php artisan route:clear
+```
+
+**47. How to optimize Laravel app?**
+Use `config:cache`, `route:cache`, `view:cache` for performance.
+
+**48. How to deploy a Laravel app?**
+Configure `.env`, run migrations, optimize, and serve via Apache/Nginx.
+
+**49. How to schedule tasks in Laravel?**
+Using task scheduler in `App\Console\Kernel.php`
+
+**50. What is Laravel Sanctum and Passport?**
+
+* Sanctum: lightweight API token auth
+* Passport: full OAuth2 server implementation
+
+---
+
+These questions and answers will help you crack Laravel interviews from basic to advanced level.
