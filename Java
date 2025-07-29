@@ -1,0 +1,344 @@
+✅ 1. What are the differences between JDK, JRE, and JVM?
+Answer:
+
+JVM (Java Virtual Machine): Runs Java bytecode and provides platform independence.
+
+JRE (Java Runtime Environment): Includes JVM + libraries to run Java programs.
+
+JDK (Java Development Kit): JRE + development tools like compiler (javac), debugger, etc.
+
+✅ 2. What is the difference between == and .equals() in Java?
+Answer:
+
+== compares references (memory addresses).
+
+.equals() compares contents (values) of objects (overridden in String, Integer, etc).
+
+java
+Copy
+Edit
+String s1 = new String("hello");
+String s2 = new String("hello");
+System.out.println(s1 == s2);      // false
+System.out.println(s1.equals(s2)); // true
+✅ 3. What is method overloading and overriding?
+Answer:
+
+Overloading: Same method name with different parameters (in same class).
+
+Overriding: Redefining a superclass method in a subclass (same signature).
+
+java
+Copy
+Edit
+class A {
+    void show(int a) { }
+    void show(String b) { }  // Overloading
+}
+class B extends A {
+    void show(int a) { }     // Overriding
+}
+✅ 4. Difference between abstract class and interface?
+Feature	Abstract Class	Interface
+Keywords	abstract	interface
+Methods	Can have both abstract and non-abstract methods	All methods are abstract by default (till Java 7)
+Inheritance	Supports single inheritance	Supports multiple inheritance
+Variables	Can have instance variables	Only constants (public static final)
+
+✅ 5. What is encapsulation in Java?
+Answer:
+Encapsulation means wrapping data (variables) and methods into a single unit (class). We make variables private and access them using getters and setters.
+
+java
+Copy
+Edit
+class Student {
+    private int age;
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+}
+✅ 6. What is the difference between ArrayList and LinkedList?
+Feature	ArrayList	LinkedList
+Memory	Uses dynamic array	Doubly linked list
+Access time	Fast (O(1))	Slow (O(n))
+Insert/Delete	Slow (due to shifting)	Fast (no shifting)
+
+✅ 7. How does HashSet maintain uniqueness?
+Answer:
+HashSet uses a HashMap internally. When we add an element, it calculates its hash and stores it in a bucket. If two objects are equal (equals() and hashCode()), it avoids duplication.
+
+✅ 8. What is the difference between throw and throws?
+Keyword	Meaning
+throw	Used to explicitly throw an exception
+throws	Declares that a method might throw exceptions
+
+java
+Copy
+Edit
+void test() throws IOException {  // declaration
+    throw new IOException();      // throwing
+}
+✅ 9. What is the use of final, finally, and finalize()?
+Keyword	Use
+final	Prevents modification (variable, method, class)
+finally	Always executes (used in try-catch)
+finalize()	Called before garbage collection (deprecated in Java 9)
+
+✅ 10. What are Lambda Expressions? (Java 8+)
+Answer:
+Lambda allows writing short functions without creating separate classes.
+
+java
+Copy
+Edit
+(List<Integer> list) -> list.stream().forEach(System.out::println);
+Simpler:
+
+java
+Copy
+Edit
+Runnable r = () -> System.out.println("Hello");
+r.run();
+✅ 11. What is Stream API?
+Answer:
+Stream API helps to process collections using functional-style operations.
+
+Example: Print even numbers from a list
+
+java
+Copy
+Edit
+List<Integer> list = Arrays.asList(1, 2, 3, 4);
+list.stream()
+    .filter(n -> n % 2 == 0)
+    .forEach(System.out::println);
+✅ 12. Explain HashMap working in simple terms
+Answer:
+
+Stores key-value pairs.
+
+Calculates hashCode() of the key → maps to bucket.
+
+If collision occurs (same bucket), it stores in linked list or tree.
+
+Uses equals() to check key uniqueness.
+
+✅ 13. What is the difference between checked and unchecked exceptions?
+Checked: Caught at compile time (e.g., IOException, SQLException)
+
+Unchecked: Caught at runtime (e.g., NullPointerException, ArithmeticException)
+
+✅ 14. What is multithreading?
+Answer:
+Multithreading is the ability of Java to run multiple threads (smaller parts of a program) concurrently.
+
+java
+Copy
+Edit
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Running in thread");
+    }
+}
+✅ 15. What is the difference between sleep() and wait()?
+Method	Class	Lock	Use
+sleep()	Thread	Doesn’t release lock	Pause thread
+wait()	Object	Releases lock	Wait for signal (notify/notifyAll)
+
+Would you like me to also give:
+
+Code questions based on Java (e.g. DSA or mini programs)?
+
+Behavioral/HR questions?
+
+Or more advanced topics like design patterns, JDBC, or Java EE?
+
+Let me know how deep you want to go.
+
+
+
+
+
+
+
+
+You said:
+What is the difference between int and Integer?
+Can we achieve multiple inheritance in Java? How?
+Practical/Code-Based Questions
+Reverse a string without using library methods.
+
+Write a program to check if a number is prime.
+
+Write code to detect a duplicate element in an array.
+
+Sort a list of custom objects by field (e.g., sort students by marks).
+
+Write a program to use HashMap and perform basic operations.
+
+
+ChatGPT said:
+Great set of questions, Ritu! Let's go one-by-one with clear explanations and code examples 👇
+
+✅ 1. What is the difference between int and Integer?
+int (Primitive)	Integer (Wrapper class)
+It's a primitive data type	It's a class (in java.lang)
+Stores actual value	Stores object that contains an int
+Cannot be null	Can be null
+Faster performance	Slower (due to object overhead)
+
+Example:
+
+java
+Copy
+Edit
+int a = 5;
+Integer b = 5;  // Autoboxing
+
+int c = b;      // Unboxing
+✅ 2. Can we achieve multiple inheritance in Java? How?
+Answer:
+
+Java does not support multiple inheritance with classes to avoid ambiguity (Diamond Problem).
+
+But Java supports multiple inheritance using interfaces.
+
+Example:
+
+java
+Copy
+Edit
+interface A {
+    void show();
+}
+interface B {
+    void display();
+}
+class C implements A, B {
+    public void show() {
+        System.out.println("Show from A");
+    }
+    public void display() {
+        System.out.println("Display from B");
+    }
+}
+🔁 Practical / Code-Based Questions
+✅ 3. Reverse a String without using library methods
+java
+Copy
+Edit
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Ritu";
+        String reversed = "";
+        for(int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+        System.out.println("Reversed: " + reversed);
+    }
+}
+✅ 4. Check if a number is prime
+java
+Copy
+Edit
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 13;
+        boolean isPrime = true;
+        
+        if(num <= 1) isPrime = false;
+
+        for(int i = 2; i <= Math.sqrt(num); i++) {
+            if(num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        System.out.println(num + " is prime? " + isPrime);
+    }
+}
+✅ 5. Detect duplicate element in an array
+java
+Copy
+Edit
+import java.util.HashSet;
+
+public class FindDuplicate {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 2, 4, 3};
+        HashSet<Integer> seen = new HashSet<>();
+
+        for(int num : arr) {
+            if(seen.contains(num)) {
+                System.out.println("Duplicate found: " + num);
+                return;
+            }
+            seen.add(num);
+        }
+        System.out.println("No duplicates");
+    }
+}
+✅ 6. Sort a list of custom objects (e.g., students by marks)
+java
+Copy
+Edit
+import java.util.*;
+
+class Student {
+    String name;
+    int marks;
+
+    Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+}
+
+public class SortStudent {
+    public static void main(String[] args) {
+        List<Student> list = new ArrayList<>();
+        list.add(new Student("Ritu", 90));
+        list.add(new Student("Amit", 75));
+        list.add(new Student("Neha", 85));
+
+        // Sorting by marks
+        Collections.sort(list, (a, b) -> a.marks - b.marks);
+
+        for(Student s : list) {
+            System.out.println(s.name + ": " + s.marks);
+        }
+    }
+}
+✅ 7. HashMap basic operations
+java
+Copy
+Edit
+import java.util.HashMap;
+
+public class HashMapDemo {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Adding elements
+        map.put("Ritu", 90);
+        map.put("Amit", 85);
+        map.put("Neha", 95);
+
+        // Accessing
+        System.out.println("Ritu's Marks: " + map.get("Ritu"));
+
+        // Updating
+        map.put("Amit", 88);
+
+        // Iterating
+        for(String name : map.keySet()) {
+            System.out.println(name + ": " + map.get(name));
+        }
+
+        // Removing
+        map.remove("Neha");
+
+        System.out.println("After removal: " + map);
+    }
+}
